@@ -7,6 +7,9 @@ import {
   withRouter
 } from 'react-router-dom'
 
+import PublicPage from './PublicPage'
+import ProtectedPage from './ProtectedPage'
+
 ////////////////////////////////////////////////////////////
 // 1. Click the public page
 // 2. Click the protected page
@@ -21,9 +24,9 @@ const App = () => (
         <li><Link to="/public">Public Page</Link></li>
         <li><Link to="/protected">Protected Page</Link></li>
       </ul>
-      <Route path="/public" component={Public}/>
+      <Route path="/public" component={PublicPage}/>
       <Route path="/login" component={Login}/>
-      <PrivateRoute path="/protected" component={Protected}/>
+      <PrivateRoute path="/protected" component={ProtectedPage}/>
     </div>
   </Router>
 )
@@ -64,9 +67,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     )
   )}/>
 )
-
-const Public = () => <h3>Public</h3>
-const Protected = () => <h3>Protected</h3>
 
 class Login extends React.Component {
   state = {
