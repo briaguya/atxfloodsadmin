@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Link, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Link, Route, IndexRoute } from 'react-router';
 import {
   cognito,
   createGuard,
@@ -17,6 +17,9 @@ import PasswordResetForm from './PasswordResetForm';
 import UpdateEmailForm from './UpdateEmailForm';
 import RegisterForm from './RegisterForm';
 import config from '../config.json';
+import createBrowserHistory from 'history/createBrowserHistory'
+
+const browserHistory = createBrowserHistory()
 
 const reducers = combineReducers({
   cognito,

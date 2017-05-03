@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "amazon-cognito-identity-js": "^1.16.0",
-    "aws-cognito-sdk": "file:modules/aws-cognito-sdk/",
-    "prop-types": "^15.5.8",
+    "aws-cognito-sdk": "https://github.com/briaguya/amazon-cognito-identity-js.git",
+    "aws-sdk": "^2.48.0",
     "react": "^15.5.4",
-    "react-cognito": "^1.3.2",
+    "react-cognito": "https://github.com/briaguya/react-cognito.git",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
